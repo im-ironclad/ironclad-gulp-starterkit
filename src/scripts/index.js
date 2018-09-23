@@ -1,4 +1,4 @@
-const testFunc = require('./test');
+import testFunc from './test';
 
 ((function domReady() {
   const planet = 'world';
