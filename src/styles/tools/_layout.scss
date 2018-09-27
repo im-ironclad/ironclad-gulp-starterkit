@@ -1,5 +1,3 @@
-// TODO: Personalize layout settings & mixins
-
 /**
  * Layout mixins
  */
@@ -12,81 +10,45 @@
   }
 }
 
-@mixin psuedo {
-  content: "";
-  display: block;
-  visibility: visible;
-  position: absolute;
+@mixin container() {
+  // TODO: Set up container mixin
 }
-
-@mixin container($size: "lg") {
-  $mobile-width: 90%;
-  $width: $cont-lg;
-  $max-width: $max-width-lg;
-
-  width: $width;
-  max-width: $max-width;
-  margin-right: auto;
-  margin-left: auto;
-  @if ($size=="sm") {
-    $width: $cont-sm;
-    $max-width: $max-width-sm;
-  }
-  @else if ($size=="md") {
-    $width: $cont-md;
-    $max-width: $max-width-md;
-  }
-  @else if ($size=="lg") {
-    $width: $cont-lg;
-    $max-width: $max-width-lg;
-  }
-  @else if ($size=="xl") {
-    $mobile-width: 100%;
-    $width: 100%;
-    $max-width: $max-width-lg;
-  }
-  //@include clear; //uncomment and use this mixin to clear floats when using float layouts
-  @media (max-width: $screen-xs-max) {
-    width: $mobile-width;
-  }
-}
-
 
 /**
- * Adds border to element to contain child margins.
- * Useful for scrolling to elements whose children use margin for spacing
- * while ensuring scroll target includes spacing created by margin
+ * Spacing mixin
+ * - refers to vertical space
  */
-
-@mixin marginContainer() {
-  border: 1px solid transparent;
+@mixin spacing() {
+  // TODO: set up spacing mixin
 }
 
-@mixin space($space: $spacing-md, $bottom: false) {
-  padding-top: $space;
-  padding-bottom: $space;
-  @if ($bottom) {
-    padding-bottom: $bottom;
-  }
+/**
+ * Gutter mixin
+ * - refers to horizonal space
+ */
+@mixin gutter() {
+  // TODO: set up gutter mixin
 }
 
-@mixin pad($pad: $indent-sm, $right: false) {
-  padding-right: $pad;
-  padding-left: $pad;
-  @if ($right) {
-    padding-right: $right;
-  }
-}
-
-@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
+/**
+ * Mixin for positioning elements - absolute
+ */
+@mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto, $z-index: 1) {
   position: absolute;
   top: $top;
   right: $right;
   bottom: $bottom;
   left: $left;
+  z-index: $z-index;
 }
 
-@mixin centerer($horizontal: true, $vertical: true) {
+/**
+ * Mixin for using transform trick to center
+ * an element inside container using absolute positioning
+ * 
+ * Choice of horizontally vertically or both.
+ */
+@mixin center($horizontal: true, $vertical: true) {
   position: absolute;
   @if ($horizontal and $vertical) {
     top: 50%;
@@ -105,10 +67,4 @@
     top: 0;
     left: 0;
   }
-}
-
-@mixin fullOverlay($center: false) {
-  @include centerer($center, $center);
-  width: 100%;
-  height: 100%;
 }
