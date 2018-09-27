@@ -1,9 +1,9 @@
 # gulp-scss-vanilla-starterkit
 ### Starter kit for whipping up a SCSS/VanillaJS project
-This is my own personal version of a php/scss/vanillajs project.  
+This is my personl in-progress version of a php/scss/vanillajs project.  
 Please feel free to utilize this yourself if you find it useful.
 
-I am going to be expanding on the javascript architecture soon.
+I am going to be expanding on the JS architecture soon and may decide to incorporate a PHP framework (CodeIgniter or Laravel) to bring the boilerplate full circle for PHP projects.
 
 ***
 
@@ -13,4 +13,4 @@ I am going to be expanding on the javascript architecture soon.
 3. Run "npm i" or "npm install" to install all the needed dependencies.
 4. Run "gulp build" to verify the build task is running without errors.
 5. Remove/Update the .git Directory to the appropriate repo for your new project.
-6. Get started setting up the SCSS variables and get to coding!
+6. Get started setting up your SCSS variables and get to coding!
