@@ -1,6 +1,6 @@
 # gulp-scss-vanilla-starterkit
 ### Starter kit for whipping up a SCSS/VanillaJS project
-This is my personl in-progress version of a php/scss/vanillajs project.  
+
 Please feel free to utilize this yourself if you find it useful.
 
 I am going to be expanding on the JS architecture soon and may decide to incorporate a PHP framework (CodeIgniter or Laravel) to bring the boilerplate full circle for PHP projects.
