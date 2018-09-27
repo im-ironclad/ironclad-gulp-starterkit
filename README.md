@@ -9,7 +9,7 @@ I am going to be expanding on the JS architecture soon and may decide to incorpo
 ***
 
 ### Instructions
-1. Clone repo to your local environment.
+1. Fork & Clone repo to your local environment.
 2. If you have an apache environment, set up your vhost to look at the public directory.
 3. Run **npm i** or **npm install** to install all the needed dependencies.
 4. Run **gulp build** to verify the build task is running without errors.
