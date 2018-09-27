@@ -1,7 +1,7 @@
 /**
  * Require packages
  * 
- * make sure everything from package is used
+ * TODO: make sure everything from package is used
  */
 var gulp = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
@@ -76,7 +76,6 @@ gulp.task('images:svgsprite', function() {
     .pipe(cheerio({
       run: function($) {
         $('svg').attr('style', 'display:none'); // make sure the spritemap doesn't show
-        $('[fill]').removeAttr('fill'); // remove all 'fill' attributes in order to control via CSS
       },
       parserOptions: { lowerCaseAttributeNames: false },
     }))
@@ -193,5 +192,5 @@ gulp.task('build', ['images', 'scripts', 'styles']);
  * The intention is to use direct tasks instead of a vague reference to the default task.
  */
 gulp.task('default', function() {
-  console.log('\nHello!\n\nThis gulpfile doesn\'t do anything by default. Please use the following to see a list of available tasks:\n\n$ gulp --tasks-simple\n\n');
+  console.log('\nHello!\n\nThis gulpfile doesn\'t do anything by default. Use the following to see a list of available tasks:\n\n$ gulp --tasks-simple\n\n');
 });
