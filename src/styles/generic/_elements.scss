@@ -1,3 +1,5 @@
+// TODO: Personalize this file
+
 html {
   font-size: 62.5%; // Sets up the Base 10 stuff
 }
@@ -27,9 +29,8 @@ sup {
 }
 
 hr {
-  height: 1px;
-  max-width: $cont-xl;
-  margin: 0 auto;
+  height: 4px;
+  margin: 0;
   border: 0;
   background-color: $color-black;
 }
@@ -66,4 +67,17 @@ button {
   border-radius: 0;
   cursor: pointer;
   background: none;
+  &:disabled {
+    cursor: inherit;
+  }
+}
+
+i.icon {
+  display: inline-block;
+  position: relative;
+  width: $spacing-xs;
+  height: $spacing-xs;
+  & svg {
+    @include fullOverlay();
+  }
 }

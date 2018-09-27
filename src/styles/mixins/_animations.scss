@@ -1,0 +1,202 @@
+// TODO: Go through this file, remove or add mixins as needed
+
+/**
+ * Animation mixins
+ */
+
+@mixin reveal(
+  $enter-class: "body.enter",
+  $exit-class: "body.exit",
+  $top: -1px,
+  $right: -1px,
+  $bottom: -1px,
+  $left: -1px,
+  $enter-origin: right,
+  $exit-origin: left,
+  $background-color: $color-white,
+  $speed: $animate-xl,
+  $delay: 0s,
+  $override-no-js: false
+) {
+  position: relative;
+
+  &:before {
+    @include absolute($top, $right, $bottom, $left);
+    content: "";
+    transform-origin: $enter-origin;
+    z-index: 10;
+    background-color: $background-color;
+    transition: transform $speed;
+    transition-delay: $delay;
+
+    @if ($enter-origin == top or $enter-origin == bottom) {
+      transform: scaleY(1);
+    }
+    @else if ($enter-origin == left or $enter-origin == right) {
+      transform: scaleX(1);
+    }
+  }
+
+  main.enter &:before,
+  article.enter &:before,
+  #{$enter-class} &:before {
+    @if ($enter-origin == top or $enter-origin == bottom) {
+      transform: scaleY(0);
+    }
+    @else if ($enter-origin == left or $enter-origin == right) {
+      transform: scaleX(0);
+    }
+  }
+
+  main.exit &:before,
+  article.exit &:before,
+  #{$exit-class} &:before {
+    transform-origin: $exit-origin;
+
+    @if ($exit-origin == top or $exit-origin == bottom) {
+      transform: scaleY(1);
+    }
+    @else if ($exit-origin == left or $exit-origin == right) {
+      transform: scaleX(1);
+    }
+  }
+
+  @if ($override-no-js == true) {
+  } @else {
+    [data-no-js="true"] &:before {
+      @if ($enter-origin == top or $enter-origin == bottom) {
+        transform: scaleY(0);
+      }
+      @else if ($enter-origin == left or $enter-origin == right) {
+        transform: scaleX(0);
+      }
+    }
+  }
+}
+
+// @mixin listReveal(
+//   $enter-class: "body.enter",
+//   $exit-class: "body.exit",
+//   $enter-origin: right,
+//   $exit-origin: left,
+//   $background-color: $color-white,
+//   $speed: $animate-xl,
+//   $delay-ratio: 20,
+//   $count: 16,
+//   $override-no-js: false
+// ) {
+//   @for $i from 1 through $count {
+//     &:nth-child(#{$i}) {
+//       @include reveal(
+//       $enter-class: $enter-class,
+//       $exit-class: $exit-class,
+//       $enter-origin: $enter-origin,
+//       $exit-origin: $exit-origin,
+//       $background-color: $background-color,
+//       $speed: $speed,
+//       $delay: ($i / $delay-ratio) + s,
+//       $override-no-js: $override-no-js
+//       );
+//     }
+//   }
+// }
+
+@mixin fadeIn(
+  $enter-class: "body.enter",
+  $exit-class: "body.exit",
+  $override-no-js: false
+) {
+  opacity: 0;
+  transition: opacity $animate-xl;
+
+  pointer-events: none;
+
+  main.enter &,
+  article.enter &,
+  #{$enter-class} & {
+    opacity: 1;
+
+    pointer-events: auto;
+  }
+
+  main.exit &,
+  article.exit &,
+  #{$exit-class} & {
+    opacity: 0;
+
+    pointer-events: none;
+  }
+
+  @if ($override-no-js == true) {
+    opacity: 0;
+    transition: none;
+
+    pointer-events: none;
+  } @else {
+    [data-no-js="true"] & {
+      opacity: 1;
+
+      pointer-events: auto;
+    }
+  }
+}
+
+@mixin underline(
+  $active-class: "is-active",
+  $focused-class: "is-focused",
+  $speed: $animate-sm,
+  $height: $spacing-xs / 4,
+  $before-color: rgba($color-orange, 0),
+  $after-color: $color-orange
+) {
+  position: relative;
+  @keyframes loading {
+    0% {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+    50% {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+    51% {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    100% {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  &:before,
+  &:after {
+    @include absolute(auto, 0, 0, 0);
+    content: "";
+    height: $height;
+    background-color: $before-color;
+  }
+
+  &:after {
+    transform: scaleX(0);
+    transform-origin: right;
+    background-color: $after-color;
+    transition: transform $speed;
+    will-change: transform;
+  }
+
+  &:hover,
+  &.#{$active-class} {
+    &:after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  &:focus,
+  &.#{$focused-class} {
+    &:after {
+      animation: loading $animate-xl infinite;
+    }
+  }
+}
