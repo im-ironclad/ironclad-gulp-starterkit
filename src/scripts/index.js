@@ -13,7 +13,6 @@ import Outro from './components/Outro';
     },
   ];
 
-  // Select, set and initiate each component
   components.forEach(component => {
     // Get all the component els on the page
     const componentEls = document.querySelectorAll(component.elsSelector);
