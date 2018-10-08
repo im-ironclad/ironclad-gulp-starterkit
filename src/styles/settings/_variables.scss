@@ -1,3 +1,5 @@
+// TODO: Think about things like button/input height. Where does it belong?
+
 /* Breakpoints */
 $screen-sm-min: 768px;
 $screen-xs-max: $screen-sm-min - 1;
@@ -27,10 +29,6 @@ $gutter-lg: 20%;
 $max-width-sm: 1000px;
 $max-width-md: 1200px;
 $max-width-lg: 1440px;
-$nav-height-sm: 70px;
-$nav-height-lg: 100px;
-$button-height: 50px;
-$input-height: 50px;
 
 /* Colors */
 $color-white: #fff;
