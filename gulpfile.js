@@ -188,8 +188,7 @@ gulp.task('build', ['images', 'scripts', 'styles']);
 /**
  * DEFAULT
  *
- * This list will be written to the terminal when the default Gulp task is run.
- * The intention is to use direct tasks instead of a vague reference to the default task.
+ * No default task, simply let the users know a command to see all available tasks
  */
 gulp.task('default', function() {
   console.log('\nHello!\n\nThis gulpfile doesn\'t do anything by default. Use the following to see a list of available tasks:\n\n$ gulp --tasks-simple\n\n');
