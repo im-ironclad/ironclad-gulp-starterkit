@@ -1,7 +1,29 @@
-import testFunc from './test';
+import Intro from './components/Intro';
+import Outro from './components/Outro';
 
 ((function domReady() {
-  const planet = 'world';
-  console.log(`Hello ${planet}`); //eslint-disable-line
-  testFunc();
+  const components = [
+    {
+      Component: Intro,
+      elsSelector: '.intro',
+    },
+    {
+      Component: Outro,
+      elsSelector: '.outro',
+    },
+  ];
+
+  // Select, set and initiate each component
+  components.forEach(component => {
+    // Get all the component els on the page
+    const componentEls = document.querySelectorAll(component.elsSelector);
+
+    // For each el make it a new component and initiate
+    componentEls.forEach(el => {
+      el = new component.Component({
+        parent: el,
+      });
+      el.init();
+    });
+  });
 })());

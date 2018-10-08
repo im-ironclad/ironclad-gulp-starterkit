@@ -3,7 +3,7 @@
   "parserOptions":{
     "ecmaVersion": 2016,
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
+      "ecmaVersion": true
     }
   },
   "rules": {

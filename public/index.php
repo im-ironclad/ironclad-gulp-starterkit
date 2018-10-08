@@ -12,6 +12,11 @@
   <h1>
     Gulp SCSS &amp; Vanilla JS Starter Kit
   </h1>
+  
+  <?php
+    include 'intro.php';
+    include 'outro.php';
+  ?>
 
   <script src="scripts/index.js"></script>
 </body>
