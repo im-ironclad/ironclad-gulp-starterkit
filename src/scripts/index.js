@@ -1,5 +1,6 @@
 import Intro from './components/Intro';
 import Outro from './components/Outro';
+import PortfolioSlider from './components/PortfolioSlider';
 
 ((function domReady() {
   const components = [
@@ -10,6 +11,10 @@ import Outro from './components/Outro';
     {
       Component: Outro,
       elsSelector: '.outro',
+    },
+    {
+      Component: PortfolioSlider,
+      elsSelector: '.portfolio-slider',
     },
   ];
 

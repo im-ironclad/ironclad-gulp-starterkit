@@ -18,6 +18,7 @@
   <?php
     include 'intro.php';
     include 'outro.php';
+    include 'slider.php';
   ?>
 
   <script src="scripts/index.js"></script>
