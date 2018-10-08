@@ -62,22 +62,22 @@ textarea {
 }
 
 button {
+  cursor: pointer;
   padding: 0;
   border: 0;
   border-radius: 0;
-  cursor: pointer;
   background: none;
   &:disabled {
     cursor: inherit;
   }
 }
 
-i.icon {
-  display: inline-block;
-  position: relative;
-  width: $spacing-xs;
-  height: $spacing-xs;
-  & svg {
-    @include fullOverlay();
-  }
-}
+// i.icon {
+//   display: inline-block;
+//   position: relative;
+//   width: $spacing-xs;
+//   height: $spacing-xs;
+//   & svg {
+//     @include fullOverlay();
+//   }
+// }

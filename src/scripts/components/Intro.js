@@ -13,7 +13,10 @@ export default class Intro {
   }
 
   init() {
-    console.log(this.parent); // eslint-disable-line
-    console.log(this.heading); //eslint-disable-line
+    this.setListeners();
+  }
+
+  setListeners() {
+    this.heading.addEventListener('click', e => console.log(e.target));
   }
 }
