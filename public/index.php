@@ -9,9 +9,11 @@
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-  <h1>
-    Gulp SCSS &amp; Vanilla JS Starter Kit
-  </h1>
+  <nav>
+    <h1>
+      Gulp SCSS &amp; Vanilla JS Starter Kit
+    </h1>
+  </nav>
   
   <?php
     include 'intro.php';

@@ -1,33 +1,14 @@
-// TODO: Personalize layout settings & mixins
-
 /**
- * Layout mixins
+ * Layout Mixins
  */
 
-@mixin clear() {
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-
-@mixin psuedo {
-  content: "";
-  display: block;
-  visibility: visible;
-  position: absolute;
-}
-
+// Default container is lg
 @mixin container($size: "lg") {
-  $mobile-width: 90%;
-  $width: $cont-lg;
-  $max-width: $max-width-lg;
-
-  width: $width;
-  max-width: $max-width;
+  width: $cont-lg;
+  max-width: $max-width-lg;
   margin-right: auto;
   margin-left: auto;
+
   @if ($size=="sm") {
     $width: $cont-sm;
     $max-width: $max-width-sm;
@@ -36,33 +17,34 @@
     $width: $cont-md;
     $max-width: $max-width-md;
   }
-  @else if ($size=="lg") {
-    $width: $cont-lg;
-    $max-width: $max-width-lg;
-  }
-  @else if ($size=="xl") {
-    $mobile-width: 100%;
-    $width: 100%;
-    $max-width: $max-width-lg;
-  }
   //@include clear; //uncomment and use this mixin to clear floats when using float layouts
-  @media (max-width: $screen-xs-max) {
-    width: $mobile-width;
-  }
 }
-
 
 /**
- * Adds border to element to contain child margins.
- * Useful for scrolling to elements whose children use margin for spacing
- * while ensuring scroll target includes spacing created by margin
+ * Adds :after pseudo el and clears both
  */
-
-@mixin marginContainer() {
-  border: 1px solid transparent;
+@mixin clear() {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
-@mixin space($space: $spacing-md, $bottom: false) {
+/**
+ * Base styles for a pseudo el
+ */
+@mixin psuedoEl {
+  content: "";
+  display: block;
+  visibility: visible;
+  position: absolute;
+}
+
+/**
+ * Creates spacing | Vertical
+ */
+@mixin spacing($space: $spacing-md, $bottom: false) {
   padding-top: $space;
   padding-bottom: $space;
   @if ($bottom) {
@@ -70,7 +52,10 @@
   }
 }
 
-@mixin pad($pad: $indent-sm, $right: false) {
+/**
+ * Creates padding | Horizontal
+ */
+@mixin padding($pad: $indent-sm, $right: false) {
   padding-right: $pad;
   padding-left: $pad;
   @if ($right) {
@@ -78,6 +63,9 @@
   }
 }
 
+/**
+ * Position Absolute base styles
+ */
 @mixin absolute($top: auto, $right: auto, $bottom: auto, $left: auto) {
   position: absolute;
   top: $top;
@@ -86,8 +74,13 @@
   left: $left;
 }
 
+/**
+ * Base styles for centering with positioning
+ */
 @mixin centerer($horizontal: true, $vertical: true) {
   position: absolute;
+  top: 0;
+  left: 0;
   @if ($horizontal and $vertical) {
     top: 50%;
     left: 50%;
@@ -101,12 +94,11 @@
     top: 50%;
     transform: translate(0, -50%);
   }
-  @else {
-    top: 0;
-    left: 0;
-  }
 }
 
+/**
+ * Mixin for a full size overlay, or mask etc.
+ */
 @mixin fullOverlay($center: false) {
   @include centerer($center, $center);
   width: 100%;

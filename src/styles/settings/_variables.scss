@@ -1,7 +1,4 @@
-// TODO: Remove/Add variables as I see fit
-
 /* Breakpoints */
-
 $screen-sm-min: 768px;
 $screen-xs-max: $screen-sm-min - 1;
 $screen-md-min: 992px;
@@ -12,40 +9,35 @@ $screen-xl-min: 1500px;
 $screen-lg-max: $screen-xl-min - 1;
 
 /* Spacing */
-
-$spacing-xs: 12px;
-$spacing-sm: 24px;
-$spacing-md: 48px;
-$spacing-lg: 96px;
-$spacing-xl: 128px;
+$spacing-xs: 10px;
+$spacing-sm: 20px;
+$spacing-md: 40px;
+$spacing-lg: 80px;
+$spacing-xl: 120px;
 
 /* Layout */
-
 $min-page-width: 320px;
 $max-page-width: 1900px;
-$max-col-width: 550px;
-$cont-lg: 95%;
-$cont-md: 78%;
+$cont-lg: 90%;
+$cont-md: 80%;
 $cont-sm: 60%;
-$max-width-sm: 1000px;
-$max-width-md: 1300px;
-$max-width-lg: 1600px;
-$gutter-sm: 2.5%;
-$gutter-md: 11%;
+$gutter-sm: 5%;
+$gutter-md: 10%;
 $gutter-lg: 20%;
-$nav-height-xs: $spacing-sm * 3;
-$nav-height-sm: $spacing-lg;
-$nav-height-md: $spacing-lg;
-$nav-height-lg: $spacing-xl;
-$input-height: $spacing-xs * 5;
+$max-width-sm: 1000px;
+$max-width-md: 1200px;
+$max-width-lg: 1440px;
+$nav-height-sm: 70px;
+$nav-height-lg: 100px;
+$button-height: 50px;
+$input-height: 50px;
 
 /* Colors */
-
 $color-white: #fff;
 $color-black: #111;
+$color-grey: #e2e2e2;
 
 /* Font */
-
 $font-family-primary: Helvetica,
 Arial,
 "Lucida Grande",
@@ -56,12 +48,4 @@ $font-medium: 500;
 $font-bold: 700;
 
 /* Animations */
-
-$animate-speed-sm: 0.2s;
-$animate-speed-md: 0.3s;
-$animate-speed-lg: 0.5s;
-$animate-speed-xl: 0.8s;
-$animate-sm: $animate-speed-sm ease-in-out;
-$animate-md: $animate-speed-md ease-in-out;
-$animate-lg: $animate-speed-lg ease-in-out;
-$animate-xl: $animate-speed-xl ease-in-out;
+// TODO: Create animation variables

@@ -1,3 +1,25 @@
-h1 {
-  @include font('heading-lg');
+/**
+ * This file is temporary, delete as needed
+ */
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: $nav-height-lg;
+  margin-bottom: $spacing-md;
+  background-color: $color-grey;
+
+  & h1 {
+    @include font('heading-lg');
+  }
 }

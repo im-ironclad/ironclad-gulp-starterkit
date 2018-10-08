@@ -1,5 +1,5 @@
 <section class="outro">
   <p>
-    outro
+    Outro Component
   </p>
 </section>

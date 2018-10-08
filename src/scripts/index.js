@@ -2,8 +2,6 @@ import Intro from './components/Intro';
 import Outro from './components/Outro';
 
 ((function domReady() {
-  console.time('total');
-
   const components = [
     {
       Component: Intro,
@@ -27,6 +25,4 @@ import Outro from './components/Outro';
       el.init();
     });
   });
-
-  console.timeEnd('total');
 })());
