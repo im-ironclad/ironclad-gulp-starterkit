@@ -14,8 +14,8 @@ const selectors = {
     peopleSelector: '.js-people',
     slidersSelector: '.js-image-slider',
     sliderIndexes: '.js-index',
-    controlPrevSelector: '.js-prev',
-    controlNextSelector: '.js-next',
+    controlPrevSelector: '.portfolio-slider__left-cont__name-cont__controls__prev',
+    controlNextSelector: '.portfolio-slider__left-cont__name-cont__controls__next',
   },
   imageSliders: '.js-image-slider',
   imageSliderSelectors: {
@@ -31,7 +31,8 @@ const selectors = {
  * [PersonSlider - standalone slider for switching between items/groups]
  */
 class PersonSlider {
-  constructor(
+  constructor({
+    parent,
     gridSelector,
     namesSelector,
     copySelector,
@@ -40,15 +41,16 @@ class PersonSlider {
     sliderIndexes,
     controlPrevSelector,
     controlNextSelector
-  ) {
+  }) {
+    this.parent = parent;
     this.grid = document.querySelector(gridSelector);
-    this.sliderNames = document.querySelectorAll(namesSelector);
+    this.sliderNames = this.parent.querySelectorAll(namesSelector);
     this.copy = Array.from(this.grid.querySelectorAll(copySelector));
     this.people = Array.from(this.grid.querySelectorAll(peopleSelector));
-    this.sliders = Array.from(document.querySelectorAll(slidersSelector));
-    this.sliderIndexes = Array.from(document.querySelectorAll(sliderIndexes));
-    this.controlPrev = document.querySelector(controlPrevSelector);
-    this.controlNext = document.querySelector(controlNextSelector);
+    this.sliders = Array.from(this.parent.querySelectorAll(slidersSelector));
+    this.sliderIndexes = Array.from(this.parent.querySelectorAll(sliderIndexes));
+    this.controlPrev = this.parent.querySelector(controlPrevSelector);
+    this.controlNext = this.parent.querySelector(controlNextSelector);
     this.currentIndex = 0;
   }
 
@@ -172,10 +174,22 @@ class ImageSlider {
 export default class PortfolioSlider {
   constructor({ parent }) {
     this.parent = parent;
+    this.personSlider = new PersonSlider({
+      parent: this.parent,
+      gridSelector: selectors.personSliderSelectors.gridSelector,
+      namesSelector: selectors.personSliderSelectors.namesSelector,
+      copySelector: selectors.personSliderSelectors.copySelector,
+      peopleSelector: selectors.personSliderSelectors.peopleSelector,
+      slidersSelector: selectors.personSliderSelectors.slidersSelector,
+      sliderIndexes: selectors.personSliderSelectors.sliderIndexes,
+      controlPrevSelector: selectors.personSliderSelectors.controlPrevSelector,
+      controlNextSelector: selectors.personSliderSelectors.controlNextSelector,
+    });
     this.imageSliders = this.parent.querySelectorAll(selectors.imageSliders);
   }
 
   init() {
+    this.personSlider.init();
     this.imageSliders.forEach(slider => {
       slider = new ImageSlider({
         parent: slider,

@@ -9,7 +9,7 @@
   ];
 
   $couplesCopy = [
-    'The Does were an amazing couple to work with and take photos of!',
+    'blanditiis vero quam, cupiditate ullam facere corporis.',
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
     'Aspernatur ratione blanditiis vero quam distinctio reprehenderit.',
     'ad cum recusandae, cupiditate ullam facere corporis animi veniam.',
@@ -17,11 +17,44 @@
   ];
 
   $thumbnailArray = [
-    'https://images.pexels.com/photos/192329/pexels-photo-192329.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    'https://joelandamberphotography.com/wp-content/uploads/2017/06/Historic-Downtown-Charleston-SC-Engagement-Session-Joel-and-Amber-Photography-Charleston-Wedding-Photographer_4088.jpg',
-    'http://elyroberts.com/wp-content/uploads/2017/03/01-5159-post/Winter-Engagement-Photos-Suttle-Lake-Lodge-Bend-Oregon-1005.jpg',
-    'https://ideas.staticsfly.com/ideas/wp-content/plugins/Engagement_Photos/img/engagement-76.jpg',
-    'https://wwcdn3.weddingwire.com/img_g/ww/t30_2-engagement-photos-chensley-photography.jpg'
+    "http://placekitten.com/749/743",
+    "http://placekitten.com/752/753",
+    "http://placekitten.com/752/751",
+    "http://placekitten.com/749/746",
+    "http://placekitten.com/758/702"
+  ];
+
+  $slidersArray = [
+    [
+      "http://placekitten.com/749/748",
+      "http://placekitten.com/750/750",
+      "http://placekitten.com/750/740",
+      "http://placekitten.com/720/750"
+    ],
+    [
+      "http://placekitten.com/752/752",
+      "http://placekitten.com/751/751",
+      "http://placekitten.com/731/771",
+      "http://placekitten.com/791/721"
+    ],
+    [
+      "http://placekitten.com/752/759",
+      "http://placekitten.com/752/758",
+      "http://placekitten.com/791/721"
+    ],
+    [
+      "http://placekitten.com/749/742",
+      "http://placekitten.com/749/743",
+      "http://placekitten.com/732/771",
+      "http://placekitten.com/791/771"
+    ],
+    [
+      "http://placekitten.com/758/701",
+      "http://placekitten.com/758/752",
+      "http://placekitten.com/631/771",
+      "http://placekitten.com/701/751",
+      "http://placekitten.com/631/771"
+    ]
   ];
 
 ?>
@@ -51,7 +84,7 @@
 							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
 						</svg>
 					</i>
-				</div>	
+				</div>
 			</div>
 			
 			<div class="portfolio-slider__left-cont__grid js-grid">
@@ -70,130 +103,31 @@
 		</div>
 		
 		<div class="portfolio-slider__image-slider-cont">
-			<div class="portfolio-slider__image-slider-cont__slider js-image-slider active">
-				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev js-prev">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-					<p class="portfolio-slider__image-slider-cont__slider__controls-cont__index">
-						<span class="js-current-image-num">1</span>
-						/
-						<span class="js-total-image-num">4</span>
-					</p>
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__next js-next">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-				</div>
-				
-				<img src="https://images.pexels.com/photos/192329/pexels-photo-192329.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="js-slide active" />
-				<img src="http://placekitten.com/750/750" alt="" class="js-slide" />
-				<img src="http://placekitten.com/750/740" alt="" class="js-slide" />
-				<img src="http://placekitten.com/720/750" alt="" class="js-slide" />
-			</div>
-			
-			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
-				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev js-prev">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-					<p class="portfolio-slider__image-slider-cont__slider__controls-cont__index js-index">
-						<span class="js-current-image-num">1</span>
-						/
-						<span class="js-total-image-num">3</span>
-					</p>
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__next js-next">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-				</div>
-				
-				<img src="https://joelandamberphotography.com/wp-content/uploads/2017/06/Historic-Downtown-Charleston-SC-Engagement-Session-Joel-and-Amber-Photography-Charleston-Wedding-Photographer_4088.jpg" alt="" class="js-slide active" />
-				<img src="http://placekitten.com/751/751" alt="" class="js-slide" />
-				<img src="http://placekitten.com/731/771" alt="" class="js-slide" />
-				<img src="http://placekitten.com/791/721" alt="" class="js-slide" />
-			</div>
-			
-			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
-				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-					<p class="portfolio-slider__image-slider-cont__slider__controls-cont__index">
-						<span class="js-current-image-num">1</span>
-						/
-						<span class="js-total-image-num">3</span>
-					</p>
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__next">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-				</div>
-				
-				<img src="http://elyroberts.com/wp-content/uploads/2017/03/01-5159-post/Winter-Engagement-Photos-Suttle-Lake-Lodge-Bend-Oregon-1005.jpg" alt="" class="js-slide active" />
-				<img src="http://placekitten.com/752/752" alt="" class="js-slide" />
-				<img src="http://placekitten.com/791/721" alt="" class="js-slide" />
-			</div>
-			
-			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
-				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-					<p class="portfolio-slider__image-slider-cont__slider__controls-cont__index">
-						<span class="js-current-image-num">1</span>
-						/
-						<span class="js-total-image-num">3</span>
-					</p>
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__next">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-				</div>
-				
-				<img src="https://ideas.staticsfly.com/ideas/wp-content/plugins/Engagement_Photos/img/engagement-76.jpg" alt="" class="js-slide active" />
-				<img src="http://placekitten.com/749/749" alt="" class="js-slide" />
-				<img src="http://placekitten.com/732/771" alt="" class="js-slide" />
-				<img src="http://placekitten.com/791/771" alt="" class="js-slide" />
-			</div>
-			
-			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
-				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-					<p class="portfolio-slider__image-slider-cont__slider__controls-cont__index">
-						<span class="js-current-image-num">1</span>
-						/
-						<span class="js-total-image-num">3</span>
-					</p>
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__next">
-						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
-						</svg>
-					</i>
-				</div>
-				
-				<img src="https://wwcdn3.weddingwire.com/img_g/ww/t30_2-engagement-photos-chensley-photography.jpg" alt="" class="js-slide active" />
-				<img src="http://placekitten.com/758/752" alt="" class="js-slide" />
-				<img src="http://placekitten.com/631/771" alt="" class="js-slide" />
-				<img src="http://placekitten.com/701/751" alt="" class="js-slide" />
-				<img src="http://placekitten.com/631/771" alt="" class="js-slide" />
-			</div>
+      <?php foreach($slidersArray as $i => $sliderArray): ?>
+        <div class="portfolio-slider__image-slider-cont__slider js-image-slider<?= $i === 0 ? ' active' : null ?>">
+          <div class="portfolio-slider__image-slider-cont__slider__controls-cont">
+            <i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev js-prev">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
+              </svg>
+            </i>
+            <p class="portfolio-slider__image-slider-cont__slider__controls-cont__index">
+              <span class="js-current-image-num">1</span>
+              /
+              <span class="js-total-image-num">4</span>
+            </p>
+            <i class="portfolio-slider__image-slider-cont__slider__controls-cont__next js-next">
+              <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
+              </svg>
+            </i>
+          </div>
+          
+          <?php foreach($sliderArray as $i => $image): ?>
+            <img src="<?= $image ?>" alt="" class="js-slide<?= $i === 0 ? ' active' : null ?>" />
+          <?php endforeach; ?>
+        </div>
+      <?php endforeach; ?>
 		</div>
 	</div>
 </section>
