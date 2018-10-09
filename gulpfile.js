@@ -153,6 +153,7 @@ gulp.task('scripts:watchify', function() {
 
   bundler.on('update', rebundle);
 
+  // Create function for return so that you can lint first
   function rebundle() {
     lintJs();
 
