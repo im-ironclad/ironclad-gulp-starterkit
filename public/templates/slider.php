@@ -59,7 +59,8 @@
 
 ?>
 
-<div class="portfolio-slider">
+<?php $className = 'portfolio-slider' ?>
+<div class="<?= $className ?>">
   <div class="portfolio-slider__left-cont">
     <p class="portfolio-slider__left-cont__title">
       Engagements

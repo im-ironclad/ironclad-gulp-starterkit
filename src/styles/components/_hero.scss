@@ -1,0 +1,35 @@
+$className: 'hero';
+
+.#{$className} {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-bottom: 60%;
+  margin-bottom: $spacing-lg;
+  background: rgba(260,0,0,0.1) url(https://images.pexels.com/photos/1464333/pexels-photo-1464333.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260) no-repeat left center / cover;
+
+  @media only screen and (min-width: $screen-sm-min) {
+    height: 400px;
+    padding-bottom: 0;
+    background-position: center center;
+  }
+
+  & .heading-group {
+    @include centerer("false", "true");
+    width: $max-width-md; // TODO: think about renaming these variables from max-width.. it's currently a little confusing?
+    max-width: $cont-lg;
+    margin-right: auto;
+    margin-left: auto;
+    color: $color-white;
+
+    & .subhead {
+      @include font("body");
+      text-transform: uppercase;
+      margin-bottom: $spacing-xs;
+    }
+
+    & .heading {
+      @include font("heading-lg");
+    }
+  }
+}

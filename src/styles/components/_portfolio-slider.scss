@@ -10,7 +10,6 @@ $sliderBreakpoint: 950px;
 	min-width: 320px;
 	height: auto;
 	margin: $spacing-lg auto;
-	box-shadow: 0 0 15px rgba(0,0,0,0.5);
 	background-color: $color-white;
 	
 	@media only screen and (min-width: $sliderBreakpoint) {

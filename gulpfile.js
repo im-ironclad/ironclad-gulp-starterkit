@@ -116,9 +116,10 @@ gulp.task('styles', function() {
  * STYLES:WATCH
  *
  * Watch SASS for changes
+ * 
  */
 gulp.task('styles:watch', function() {
-  return gulp.watch(dirConfig.styles.src, ['styles:sass']);
+  return gulp.watch(dirConfig.styles.entries, ['styles']);
 });
 
 /**

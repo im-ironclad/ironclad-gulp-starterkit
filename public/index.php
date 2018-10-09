@@ -16,6 +16,7 @@
   </nav>
   
   <?php
+    include 'templates/hero.php';
     include 'intro.php';
     include 'outro.php';
   ?>
