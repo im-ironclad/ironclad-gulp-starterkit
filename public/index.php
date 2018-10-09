@@ -18,8 +18,11 @@
   <?php
     include 'intro.php';
     include 'outro.php';
-    include 'templates/slider.php';
   ?>
+
+  <section class="portfolio-section">
+    <?php include 'templates/slider.php'; ?>
+  </section>
 
   <script src="scripts/index.js"></script>
 </body>

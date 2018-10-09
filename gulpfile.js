@@ -43,6 +43,20 @@ var dirConfig = {
 };
 
 /**
+ * Tasks:
+ * 
+ * - Images
+ * - Images:SVGSprite
+ * - Styles
+ * - Styles:Watch
+ * - Scripts:Lint
+ * - Scripts
+ * - Scripts:Watchify
+ * - Watch
+ * - Build
+ */
+
+/**
  * IMAGES
  *
  * optimizationLevel set to 0 to disable CPU-intensive image crunching.
@@ -77,7 +91,6 @@ gulp.task('images:svgsprite', function() {
       run: function($) {
         $('svg').attr('style', 'display:none'); // make sure the spritemap doesn't show
       },
-      parserOptions: { lowerCaseAttributeNames: false },
     }))
     .on('error', function(err) { displayError(err); })
     .pipe(gulp.dest(dirConfig.images.dist + 'sprites/'));
@@ -112,6 +125,7 @@ gulp.task('styles:watch', function() {
  * SCRIPTS:LINT
  *
  * Lint scripts using .eslintrc
+ * Create as function so you can call it in other script tasks
  */
 function lintJs() {
   return gulp.src([
