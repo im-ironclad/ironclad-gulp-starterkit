@@ -1,6 +1,6 @@
-import Intro from './components/Intro';
-import Outro from './components/Outro';
-import PortfolioSlider from './components/PortfolioSlider';
+import Intro from '../components/Intro';
+import Outro from '../components/Outro';
+import PortfolioSlider from '../components/PortfolioSlider';
 
 const components = [
   {

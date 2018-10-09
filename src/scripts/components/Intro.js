@@ -17,6 +17,6 @@ export default class Intro {
   }
 
   setListeners() {
-    this.heading.addEventListener('click', e => console.log(e.target));
+    this.heading.addEventListener('click', e => console.log(e.target)); // eslint-disable-line
   }
 }

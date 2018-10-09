@@ -1,4 +1,5 @@
-import components from './components';
+import './polyfills';
+import components from './utilities/components';
 
 ((function domReady() {
   components.forEach(component => {
