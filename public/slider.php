@@ -36,7 +36,7 @@
 			<div class="portfolio-slider__left-cont__name-cont">
 				<p class="portfolio-slider__left-cont__name-cont__name">
           <?php foreach($couples as $key => $couple): ?>
-            <span <?= $key === 0 ? 'class="active"' : null ?>><?= $couple ?></span>
+            <span class="js-people-names<?= $key === 0 ? ' active' : null ?>"><?= $couple ?></span>
           <?php endforeach ?>
 				</p>
 
@@ -54,15 +54,15 @@
 				</div>	
 			</div>
 			
-			<div class="portfolio-slider__left-cont__grid">
+			<div class="portfolio-slider__left-cont__grid js-grid">
 				<div class="portfolio-slider__left-cont__grid__copy">
 					<?php foreach($couplesCopy as $key => $copy): ?>
-            <p <?= $key === 0 ? 'class="active"' : null ?>><?= $copy ?></p>
+            <p class="js-grid-copy<?= $key === 0 ? ' active' : null ?>"><?= $copy ?></p>
           <?php endforeach ?>
 				</div>
 
         <?php foreach($thumbnailArray as $key => $thumb): ?>
-          <div class="portfolio-slider__left-cont__grid__person js-person<?= $key === 0 ? ' active' : null ?>">
+          <div class="portfolio-slider__left-cont__grid__person js-people<?= $key === 0 ? ' active' : null ?>">
             <img src="<?= $thumb ?>" alt="" />
           </div>
         <?php endforeach ?>
@@ -70,7 +70,7 @@
 		</div>
 		
 		<div class="portfolio-slider__image-slider-cont">
-			<div class="portfolio-slider__image-slider-cont__slider active">
+			<div class="portfolio-slider__image-slider-cont__slider js-image-slider active">
 				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
 					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev js-prev">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -95,19 +95,19 @@
 				<img src="http://placekitten.com/720/750" alt="" class="js-slide" />
 			</div>
 			
-			<div class="portfolio-slider__image-slider-cont__slider">
+			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
 				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev">
+					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev js-prev">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
 						</svg>
 					</i>
-					<p class="portfolio-slider__image-slider-cont__slider__controls-cont__index">
+					<p class="portfolio-slider__image-slider-cont__slider__controls-cont__index js-index">
 						<span class="js-current-image-num">1</span>
 						/
 						<span class="js-total-image-num">3</span>
 					</p>
-					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__next">
+					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__next js-next">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
 						</svg>
@@ -120,7 +120,7 @@
 				<img src="http://placekitten.com/791/721" alt="" class="js-slide" />
 			</div>
 			
-			<div class="portfolio-slider__image-slider-cont__slider">
+			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
 				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
 					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@
 				<img src="http://placekitten.com/791/721" alt="" class="js-slide" />
 			</div>
 			
-			<div class="portfolio-slider__image-slider-cont__slider">
+			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
 				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
 					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -169,7 +169,7 @@
 				<img src="http://placekitten.com/791/771" alt="" class="js-slide" />
 			</div>
 			
-			<div class="portfolio-slider__image-slider-cont__slider">
+			<div class="portfolio-slider__image-slider-cont__slider js-image-slider">
 				<div class="portfolio-slider__image-slider-cont__slider__controls-cont">
 					<i class="portfolio-slider__image-slider-cont__slider__controls-cont__prev">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -8,15 +8,16 @@
  */
 const selectors = {
   personSliderSelectors: {
-    gridSelector: '.portfolio-slider__left-cont__grid',
-    namesSelector: '.portfolio-slider__left-cont__name-cont__name span',
-    copySelector: '.portfolio-slider__left-cont__grid__copy p',
-    peopleSelector: '.js-person',
-    slidersSelector: '.portfolio-slider__image-slider-cont__slider',
-    sliderIndexes: '.portfolio-slider__image-slider-cont__controls-cont__index',
-    controlPrevSelector: '.portfolio-slider__left-cont__name-cont__controls__prev',
-    controlNextSelector: '.portfolio-slider__left-cont__name-cont__controls__next',
+    gridSelector: '.js-grid',
+    namesSelector: '.js-people-names',
+    copySelector: '.js-grid-copy',
+    peopleSelector: '.js-people',
+    slidersSelector: '.js-image-slider',
+    sliderIndexes: '.js-index',
+    controlPrevSelector: '.js-prev',
+    controlNextSelector: '.js-next',
   },
+  imageSliders: '.js-image-slider',
   imageSliderSelectors: {
     slidesSelector: '.js-slide',
     currentImageNumElSelector: '.js-current-image-num',
@@ -103,19 +104,20 @@ class PersonSlider {
  * [ImageSlider - Standalone image slider for each item/group]
  */
 class ImageSlider {
-  constructor(
+  constructor({
     parent,
     slidesSelector,
     currentImageNumElSelector,
     totalImageNumElSelector,
     controlPrevSelector,
     controlNextSelector
-  ) {
-    this.slides = Array.from(parent.querySelectorAll(slidesSelector));
-    this.currentImageNumEl = parent.querySelector(currentImageNumElSelector);
-    this.totalImageNumEl = parent.querySelector(totalImageNumElSelector);
-    this.controlPrev = parent.querySelector(controlPrevSelector);
-    this.controlNext = parent.querySelector(controlNextSelector);
+  }) {
+    this.parent = parent;
+    this.slides = Array.from(this.parent.querySelectorAll(slidesSelector));
+    this.currentImageNumEl = this.parent.querySelector(currentImageNumElSelector);
+    this.totalImageNumEl = this.parent.querySelector(totalImageNumElSelector);
+    this.controlPrev = this.parent.querySelector(controlPrevSelector);
+    this.controlNext = this.parent.querySelector(controlNextSelector);
     this.currentIndex = 0;
     this.totalImageNum = this.slides.length;
   }
@@ -168,18 +170,22 @@ class ImageSlider {
 }
 
 export default class PortfolioSlider {
-  constructor(parent) {
+  constructor({ parent }) {
     this.parent = parent;
+    this.imageSliders = this.parent.querySelectorAll(selectors.imageSliders);
   }
 
   init() {
-    this.parent = new ImageSlider({
-      parent: this.parent,
-      slidesSelector: selectors.imageSliderSelectors.slidesSelector,
-      currentImageNumElSelector: selectors.imageSliderSelectors.currentImageNumElSelector,
-      totalImageNumElSelector: selectors.imageSliderSelectors.totalImageNumElSelector,
-      controlPrevSelector: selectors.imageSliderSelectors.controlPrevSelector,
-      controlNextSelector: selectors.imageSliderSelectors.controlNextSelector,
+    this.imageSliders.forEach(slider => {
+      slider = new ImageSlider({
+        parent: slider,
+        slidesSelector: selectors.imageSliderSelectors.slidesSelector,
+        currentImageNumElSelector: selectors.imageSliderSelectors.currentImageNumElSelector,
+        totalImageNumElSelector: selectors.imageSliderSelectors.totalImageNumElSelector,
+        controlPrevSelector: selectors.imageSliderSelectors.controlPrevSelector,
+        controlNextSelector: selectors.imageSliderSelectors.controlNextSelector,
+      });
+      slider.init();
     });
   }
 }
