@@ -1,7 +1,7 @@
 /**
  * PorfolioSlider Component
  *
- * Create selectors for all encapsulated elements to manipulate
+ * Create selectors for all encapsulated elements
  * - Selectors
  * -- Person Slider Selectors
  * -- Image Slider Selectors

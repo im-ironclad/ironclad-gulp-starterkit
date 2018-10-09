@@ -4,22 +4,9 @@
  * 
  * Based off of ITCSS Architecture with a few personal changes: https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
  */
-
-/**
- * Difference between tools & utilities
- * 
- * Tools does not output CSS but sets up variables and additional mixins for use later
- * Utilities output actual CSS and implement the mixins imported earlier from Tools
- * TODO: Possibly think of better names
- */
-
-/**
- * Order is important until you hit the utilities
- */
-
 @import "settings/variables";
 
-// Animations must come after layout to call layout mixins
+// Animations must come after layout in order to call layout mixins
 @import "mixins/layout";
 @import "mixins/animations";
 @import "mixins/typography";
