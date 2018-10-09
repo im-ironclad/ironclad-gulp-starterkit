@@ -17,18 +17,18 @@
   ];
 
   $thumbnailArray = [
-    "http://placekitten.com/749/743",
-    "http://placekitten.com/752/753",
-    "http://placekitten.com/752/751",
-    "http://placekitten.com/749/746",
-    "http://placekitten.com/758/702"
+    "http://placekitten.com/849/743",
+    "http://placekitten.com/882/753",
+    "http://placekitten.com/852/751",
+    "http://placekitten.com/849/746",
+    "http://placekitten.com/728/746",
   ];
 
   $slidersArray = [
     [
-      "http://placekitten.com/749/748",
-      "http://placekitten.com/750/750",
-      "http://placekitten.com/750/740",
+      "http://placekitten.com/849/748",
+      "http://placekitten.com/850/750",
+      "http://placekitten.com/850/740",
       "http://placekitten.com/720/750"
     ],
     [

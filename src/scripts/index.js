@@ -1,23 +1,6 @@
-import Intro from './components/Intro';
-import Outro from './components/Outro';
-import PortfolioSlider from './components/PortfolioSlider';
+import components from './components';
 
 ((function domReady() {
-  const components = [
-    {
-      Component: Intro,
-      elsSelector: '.intro',
-    },
-    {
-      Component: Outro,
-      elsSelector: '.outro',
-    },
-    {
-      Component: PortfolioSlider,
-      elsSelector: '.portfolio-slider',
-    },
-  ];
-
   components.forEach(component => {
     // Get all the component els on the page
     const componentEls = document.querySelectorAll(component.elsSelector);

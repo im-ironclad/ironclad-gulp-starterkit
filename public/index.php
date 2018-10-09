@@ -18,7 +18,7 @@
   <?php
     include 'intro.php';
     include 'outro.php';
-    include 'slider.php';
+    include 'templates/slider.php';
   ?>
 
   <script src="scripts/index.js"></script>

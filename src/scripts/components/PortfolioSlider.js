@@ -13,7 +13,6 @@ const selectors = {
     copySelector: '.js-grid-copy',
     peopleSelector: '.js-people',
     slidersSelector: '.js-image-slider',
-    sliderIndexes: '.js-index',
     controlPrevSelector: '.portfolio-slider__left-cont__name-cont__controls__prev',
     controlNextSelector: '.portfolio-slider__left-cont__name-cont__controls__next',
   },
@@ -38,17 +37,15 @@ class PersonSlider {
     copySelector,
     peopleSelector,
     slidersSelector,
-    sliderIndexes,
     controlPrevSelector,
-    controlNextSelector
+    controlNextSelector,
   }) {
     this.parent = parent;
-    this.grid = document.querySelector(gridSelector);
+    this.grid = this.parent.querySelector(gridSelector);
     this.sliderNames = this.parent.querySelectorAll(namesSelector);
     this.copy = Array.from(this.grid.querySelectorAll(copySelector));
     this.people = Array.from(this.grid.querySelectorAll(peopleSelector));
     this.sliders = Array.from(this.parent.querySelectorAll(slidersSelector));
-    this.sliderIndexes = Array.from(this.parent.querySelectorAll(sliderIndexes));
     this.controlPrev = this.parent.querySelector(controlPrevSelector);
     this.controlNext = this.parent.querySelector(controlNextSelector);
     this.currentIndex = 0;
@@ -96,9 +93,6 @@ class PersonSlider {
     this.sliders.forEach((slide, i) => {
       slide.classList.toggle('active', i === this.currentIndex);
     });
-    this.sliderIndexes.forEach((slideIndex, i) => {
-      slideIndex.classList.toggle('active', i === this.currentIndex);
-    });
   }
 }
 
@@ -112,7 +106,7 @@ class ImageSlider {
     currentImageNumElSelector,
     totalImageNumElSelector,
     controlPrevSelector,
-    controlNextSelector
+    controlNextSelector,
   }) {
     this.parent = parent;
     this.slides = Array.from(this.parent.querySelectorAll(slidesSelector));
@@ -181,7 +175,6 @@ export default class PortfolioSlider {
       copySelector: selectors.personSliderSelectors.copySelector,
       peopleSelector: selectors.personSliderSelectors.peopleSelector,
       slidersSelector: selectors.personSliderSelectors.slidersSelector,
-      sliderIndexes: selectors.personSliderSelectors.sliderIndexes,
       controlPrevSelector: selectors.personSliderSelectors.controlPrevSelector,
       controlNextSelector: selectors.personSliderSelectors.controlNextSelector,
     });
