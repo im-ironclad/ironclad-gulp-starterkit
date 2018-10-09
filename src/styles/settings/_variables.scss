@@ -20,15 +20,18 @@ $spacing-xl: 120px;
 /* Layout */
 $min-page-width: 320px;
 $max-page-width: 1900px;
-$cont-lg: 90%;
-$cont-md: 80%;
-$cont-sm: 60%;
 $gutter-sm: 5%;
 $gutter-md: 10%;
 $gutter-lg: 20%;
-$max-width-sm: 1000px;
-$max-width-md: 1200px;
-$max-width-lg: 1440px;
+$width-sm: 1000px;
+$width-md: 1200px;
+$width-lg: 1440px;
+$max-width-lg: 90%;
+$max-width-md: 80%;
+$max-width-sm: 60%;
+// $cont-lg: 90%;
+// $cont-md: 80%;
+// $cont-sm: 60%;
 
 /* Colors */
 $color-white: #fff;

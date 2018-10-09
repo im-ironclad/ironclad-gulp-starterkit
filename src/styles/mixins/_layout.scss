@@ -4,17 +4,17 @@
 
 // Default container is lg
 @mixin container($size: "lg") {
-  width: $cont-lg;
+  width: $max-width-lg;
   max-width: $max-width-lg;
   margin-right: auto;
   margin-left: auto;
 
   @if ($size=="sm") {
-    $width: $cont-sm;
+    $width: $max-width-sm;
     $max-width: $max-width-sm;
   }
   @else if ($size=="md") {
-    $width: $cont-md;
+    $width: $max-width-md;
     $max-width: $max-width-md;
   }
   //@include clear; //uncomment and use this mixin to clear floats when using float layouts
