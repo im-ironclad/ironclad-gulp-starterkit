@@ -1,5 +1,5 @@
 /**
- * Intro Component
+ * PorfolioSlider Component
  *
  * Create selectors for all encapsulated elements to manipulate
  * - Selectors
@@ -8,13 +8,12 @@
  */
 const selectors = {
   personSliderSelectors: {
-    gridSelector: '.js-grid',
     namesSelector: '.js-people-names',
     copySelector: '.js-grid-copy',
     peopleSelector: '.js-people',
     slidersSelector: '.js-image-slider',
-    controlPrevSelector: '.portfolio-slider__left-cont__name-cont__controls__prev',
-    controlNextSelector: '.portfolio-slider__left-cont__name-cont__controls__next',
+    controlPrevSelector: '.js-group-prev',
+    controlNextSelector: '.js-group-next',
   },
   imageSliders: '.js-image-slider',
   imageSliderSelectors: {
@@ -32,7 +31,6 @@ const selectors = {
 class PersonSlider {
   constructor({
     parent,
-    gridSelector,
     namesSelector,
     copySelector,
     peopleSelector,
@@ -41,10 +39,9 @@ class PersonSlider {
     controlNextSelector,
   }) {
     this.parent = parent;
-    this.grid = this.parent.querySelector(gridSelector);
     this.sliderNames = this.parent.querySelectorAll(namesSelector);
-    this.copy = Array.from(this.grid.querySelectorAll(copySelector));
-    this.people = Array.from(this.grid.querySelectorAll(peopleSelector));
+    this.copy = Array.from(this.parent.querySelectorAll(copySelector));
+    this.people = Array.from(this.parent.querySelectorAll(peopleSelector));
     this.sliders = Array.from(this.parent.querySelectorAll(slidersSelector));
     this.controlPrev = this.parent.querySelector(controlPrevSelector);
     this.controlNext = this.parent.querySelector(controlNextSelector);
@@ -170,7 +167,6 @@ export default class PortfolioSlider {
     this.parent = parent;
     this.personSlider = new PersonSlider({
       parent: this.parent,
-      gridSelector: selectors.personSliderSelectors.gridSelector,
       namesSelector: selectors.personSliderSelectors.namesSelector,
       copySelector: selectors.personSliderSelectors.copySelector,
       peopleSelector: selectors.personSliderSelectors.peopleSelector,

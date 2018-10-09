@@ -17,11 +17,11 @@
   ];
 
   $thumbnailArray = [
-    "http://placekitten.com/849/743",
-    "http://placekitten.com/882/753",
-    "http://placekitten.com/852/751",
-    "http://placekitten.com/849/746",
-    "http://placekitten.com/728/746",
+    "http://placekitten.com/849/748",
+    "http://placekitten.com/752/752",
+    "http://placekitten.com/752/759",
+    "http://placekitten.com/749/742",
+    "http://placekitten.com/758/701",
   ];
 
   $slidersArray = [
@@ -74,12 +74,12 @@
 				</p>
 
 				<div class="portfolio-slider__left-cont__name-cont__controls">
-					<i class="portfolio-slider__left-cont__name-cont__controls__prev">
+					<i class="portfolio-slider__left-cont__name-cont__controls__prev js-group-prev">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M-2.09808e-05 4.47761L10.8333 0V10L-2.09808e-05 4.47761Z" fill="#444444"/>
 						</svg>
 					</i>
-					<i class="portfolio-slider__left-cont__name-cont__controls__next">
+					<i class="portfolio-slider__left-cont__name-cont__controls__next js-group-next">
 						<svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M10.8333 4.47761L-7.62939e-06 0V10L10.8333 4.47761Z" fill="#444444"/>
 						</svg>
