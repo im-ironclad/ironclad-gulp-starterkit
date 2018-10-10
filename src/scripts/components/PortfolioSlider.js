@@ -162,6 +162,9 @@ class ImageSlider {
   }
 }
 
+/**
+ * [PortfolioSlider Takes a parent element and creates the needed sliders for the Portfolio Slider]
+ */
 export default class PortfolioSlider {
   constructor({ parent }) {
     this.parent = parent;

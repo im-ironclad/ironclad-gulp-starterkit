@@ -43,7 +43,7 @@ $sliderBreakpoint: 950px;
 		&__title {
 			width: 100%;
 			display: block;
-			color: $color-grey-light;
+			color: $color-grey;
 			font-weight: bold;
 			margin-bottom: 20px * 1.25;
 		}
@@ -120,7 +120,7 @@ $sliderBreakpoint: 950px;
 				font-size: 12px;
 				line-height: 1.3em;
 				letter-spacing: 1px;
-				color: $color-grey-light;
+				color: $color-grey;
 				
 				p {
 					position: absolute;

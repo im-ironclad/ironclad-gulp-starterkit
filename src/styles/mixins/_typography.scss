@@ -7,7 +7,7 @@
 }
 
 @mixin font($size) {
-  font-weight: $font-book;
+  font-weight: $font-regular;
   @if ($size=="heading-lg") {
     font-weight: $font-bold;
     @include font-size-rem(2.6, 3.4);
@@ -23,7 +23,7 @@
   }
   @else if ($size=="body") {
     @include font-size-rem(1.6, 2.4);
-    font-weight: $font-book;
+    font-weight: $font-regular;
     letter-spacing: 1px;
   }
 }

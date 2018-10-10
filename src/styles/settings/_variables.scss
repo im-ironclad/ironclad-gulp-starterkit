@@ -1,4 +1,4 @@
-// TODO: Think about things like button/input height. Where does it belong?
+// TODO: Think about things like button/input height. Where does it belong? May be project specific
 
 /* Breakpoints */
 $screen-sm-min: 768px;
@@ -29,24 +29,20 @@ $width-lg: 1440px;
 $max-width-lg: 90%;
 $max-width-md: 80%;
 $max-width-sm: 60%;
-// $cont-lg: 90%;
-// $cont-md: 80%;
-// $cont-sm: 60%;
 
 /* Colors */
-$color-white: #fff;
-$color-black: #111;
-$color-grey: #e2e2e2;
-$color-grey-light: #777777;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-offwhite: #e2e2e2;
+$color-grey: #777777;
 $color-grey-dark: #444444;
 
 /* Font */
 $font-family-primary: Helvetica,
 Arial,
-"Lucida Grande",
 sans-serif;
 $font-light: 200;
-$font-book: 400;
+$font-regular: 400;
 $font-medium: 500;
 $font-bold: 700;
 
