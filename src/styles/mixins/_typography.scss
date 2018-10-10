@@ -9,8 +9,8 @@
 @mixin font($size) {
   font-weight: $font-regular;
   @if ($size=="heading-lg") {
-    font-weight: $font-bold;
     @include font-size-rem(2.6, 3.4);
+    font-weight: $font-bold;
     @media (min-width: $screen-sm-min) {
       @include font-size-rem(3.0, 3.8);
     }
@@ -23,7 +23,6 @@
   }
   @else if ($size=="body") {
     @include font-size-rem(1.6, 2.4);
-    font-weight: $font-regular;
     letter-spacing: 1px;
   }
 }
