@@ -1,4 +1,4 @@
-# gulp-scss-vanilla-starterkit
+# ironclad-gulp-starterkit
 ### Starter kit for whipping up a SCSS/VanillaJS project
 
 Please feel free to utilize this yourself if you find it useful.  
