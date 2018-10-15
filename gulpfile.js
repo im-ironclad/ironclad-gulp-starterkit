@@ -54,14 +54,13 @@ var dirConfig = {
  * - Scripts:Watchify
  * - Watch
  * - Build
+ * - Default
  */
 
 /**
  * IMAGES
  *
- * optimizationLevel set to 0 to disable CPU-intensive image crunching.
- * Use ImageOptim (lossless) on your source images.
- * We do want images to be progressive and interlaced, though.
+ * Set optimizationLevel to 0 to save CPU usage
  */
 gulp.task('images', function() {
   return gulp.src([
@@ -80,7 +79,7 @@ gulp.task('images', function() {
 /**
  * IMAGES:SVGSPRITE
  *
- * Combine all svgs in target directory into a single spritemap.
+ * Combine all svgs in target directory into a single svg spritemap.
  */
 gulp.task('images:svgsprite', function() {
   return gulp.src([
@@ -89,7 +88,7 @@ gulp.task('images:svgsprite', function() {
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(cheerio({
       run: function($) {
-        $('svg').attr('style', 'display:none'); // make sure the spritemap doesn't show
+        $('svg').attr('style', 'display:none'); // make sure the spritemap doesn't show by default
       },
     }))
     .on('error', function(err) { displayError(err); })
@@ -178,6 +177,8 @@ gulp.task('scripts:watchify', function() {
         this.emit('end');
       })
       .pipe(source('index.js'))
+      .pipe(buffer())
+      .pipe(uglify())
       .pipe(gulp.dest(dirConfig.scripts.dist))
       .pipe(livereload(server));
   }
@@ -188,7 +189,7 @@ gulp.task('scripts:watchify', function() {
 /**
  * WATCH
  *
- * Watch for changes in styles and scripts
+ * Watch for changes in both styles and scripts
  */
 gulp.task('watch', ['styles:watch', 'scripts:watchify'], function() {
   livereload.listen(server);
@@ -207,5 +208,5 @@ gulp.task('build', ['images', 'scripts', 'styles']);
  * No default task, simply let the users know a command to see all available tasks
  */
 gulp.task('default', function() {
-  console.log('\nHello!\n\nThis gulpfile doesn\'t do anything by default. Use the following to see a list of available tasks:\n\n$ gulp --tasks-simple\n\n');
+  console.log('\nThis gulpfile doesn\'t do anything by default. You can use the following command to see a list of available tasks:\n\n$ gulp --tasks-simple\n');
 });
