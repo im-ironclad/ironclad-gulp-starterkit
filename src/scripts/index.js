@@ -1,4 +1,4 @@
-// import './polyfills';
+import './polyfills';
 import components from './utilities/components';
 
 ((function domReady() {
