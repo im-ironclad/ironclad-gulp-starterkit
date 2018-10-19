@@ -1,6 +1,11 @@
 /**
  * Intro Component
  *
+ * If you need to import anything, do so here
+ */
+// import Component from './ExampleComponent';
+
+/**
  * Create selectors for all encapsulated elements to manipulate
  * - Heading
  */
@@ -17,6 +22,6 @@ export default class Intro {
   }
 
   setListeners() {
-    this.heading.addEventListener('click', e => console.log(e.target)); // eslint-disable-line
+    this.heading.addEventListener('click', e => console.log(e.target)); // eslint-disable-line no-console
   }
 }

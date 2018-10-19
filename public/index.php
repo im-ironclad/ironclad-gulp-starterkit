@@ -11,19 +11,16 @@
 <body>
   <nav>
     <h1>
-      Gulp SCSS &amp; Vanilla JS Starter Kit
+      Ironclad Gulp Starter Kit
     </h1>
   </nav>
   
-  <?php
-    include 'templates/hero.php';
-    include 'intro.php';
-    include 'outro.php';
-  ?>
-
-  <section class="portfolio-section">
-    <?php include 'templates/slider.php'; ?>
-  </section>
+  <main class="main">
+    <?php
+      include 'views/hero.php';
+      include 'views/intro.php';
+    ?>
+  </main>
 
   <script src="scripts/index.js"></script>
 </body>
