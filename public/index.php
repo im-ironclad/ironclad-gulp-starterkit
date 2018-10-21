@@ -9,11 +9,13 @@
   <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-  <nav>
-    <h1>
-      Ironclad Gulp Starter Kit
-    </h1>
-  </nav>
+  <header>
+    <nav>
+      <h1>
+        Ironclad Gulp Starter Kit
+      </h1>
+    </nav>
+  </header>
   
   <main class="main">
     <?php
