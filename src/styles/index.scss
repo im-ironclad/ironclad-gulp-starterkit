@@ -6,7 +6,7 @@
  */
 @import "settings/variables";
 
-// Animations must come after layout in order to call layout mixins
+// Others must come after layout in order to call layout mixins
 @import "mixins/layout";
 @import "mixins/animations";
 @import "mixins/typography";

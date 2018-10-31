@@ -1,4 +1,5 @@
 // https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+
 @mixin font-size-rem($size: 1.6, $lineHeight: 2.4) {
   font-size: ($size * 10) + px;
   font-size: $size + rem;
@@ -7,7 +8,9 @@
 }
 
 @mixin font($size) {
+  letter-spacing: 1px;
   font-weight: $font-regular;
+
   @if ($size=="heading-lg") {
     @include font-size-rem(2.6, 3.4);
     font-weight: $font-bold;
@@ -23,6 +26,5 @@
   }
   @else if ($size=="body") {
     @include font-size-rem(1.6, 2.4);
-    letter-spacing: 1px;
   }
 }

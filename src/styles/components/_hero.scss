@@ -16,10 +16,7 @@ $className: 'hero';
 
   & .heading-group {
     @include centerer("false", "true");
-    width: $max-width-md; // TODO: think about renaming these variables from max-width.. it's currently a little confusing?
-    max-width: $max-width-lg;
-    margin-right: auto;
-    margin-left: auto;
+    @include container();
     color: $color-white;
 
     & .subhead {

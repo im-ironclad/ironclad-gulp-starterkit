@@ -44,23 +44,17 @@
 /**
  * Creates spacing | Vertical
  */
-@mixin spacing($space: $spacing-md, $bottom: false) {
+@mixin spacing($space: $spacing-md) {
   padding-top: $space;
   padding-bottom: $space;
-  @if ($bottom) {
-    padding-bottom: $bottom;
-  }
 }
 
 /**
  * Creates padding | Horizontal
  */
-@mixin padding($pad: $indent-sm, $right: false) {
+@mixin padding($pad: $indent-sm) {
   padding-right: $pad;
   padding-left: $pad;
-  @if ($right) {
-    padding-right: $right;
-  }
 }
 
 /**
