@@ -7,4 +7,4 @@ This is best for quickly throwing together a playground to test things in Vanill
 
 1. This assumes you have a local environment set up, Fork & Clone the repo then point your vhost to /public.
 2. Run **npm install** followed by **gulp build**
-3. Point your browser to your configured ServeName and get to coding.
+3. Point your browser to your configured ServerName and get to coding.
