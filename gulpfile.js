@@ -12,6 +12,7 @@ var gulp = require('gulp'),
   eslint = require('gulp-eslint'),
   imagemin = require('gulp-imagemin'),
   sass = require('gulp-sass'),
+  serve = require('gulp-serve'),
   source = require('vinyl-source-stream'),
   svgstore = require('gulp-svgstore'),
   uglify = require('gulp-uglify'),
@@ -64,9 +65,9 @@ var dirConfig = {
  */
 gulp.task('images', function() {
   return gulp.src([
-      dirConfig.images.src + '**/*.gif',
       dirConfig.images.src + '**/*.jpg',
       dirConfig.images.src + '**/*.png',
+      // dirConfig.images.src + '**/*.gif' uncomment if needed
     ])
     .pipe(imagemin({
       optimizationLevel: 0,
