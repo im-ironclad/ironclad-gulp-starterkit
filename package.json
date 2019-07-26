@@ -6,6 +6,10 @@
   "scripts": {
     "test": "jest"
   },
+  "browserslist": [
+    "last 2 versions",
+    "ie 10"
+  ],
   "author": "Adam Wells",
   "license": "ISC",
   "devDependencies": {
