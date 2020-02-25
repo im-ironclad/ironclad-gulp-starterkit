@@ -29,6 +29,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
+    "jest": "^25.1.0",
     "tiny-lr": "^1.1.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0",

@@ -19,6 +19,7 @@ export default class Intro {
 
   init() {
     this.setListeners();
+    console.log('Initializing Intro Component...'); // eslint-disable-line
   }
 
   setListeners() {
